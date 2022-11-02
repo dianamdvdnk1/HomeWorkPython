@@ -1,5 +1,8 @@
 """Check date for truth."""
+
+
 fordel = 400
+
 
 def date(thedate):
     """
@@ -14,6 +17,7 @@ def date(thedate):
     Raise:
         ValueError: An error when we could not get int value.
     """
+
     try:
         day, month, year = map(int, list(thedate.split('.')))
     except ValueError:
