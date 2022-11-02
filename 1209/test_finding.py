@@ -1,5 +1,5 @@
 """Test function findingpercent."""
-from findpercent import findingpercent
+from findpercent import function_of_percent
 import pytest
 
 test_find = [('ABc dbE FRl Ama', '50%'), ('NDp Lka nuR vtE', '25%')]
@@ -14,4 +14,4 @@ def test_finder(string, answer):
         string: tuple - tuple with input and output.
         answer: str - percents.
     """
-    assert findingpercent(string) == answer
+    assert function_of_percent(string) == answer

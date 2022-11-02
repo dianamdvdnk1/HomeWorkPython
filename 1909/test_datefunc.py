@@ -1,5 +1,5 @@
 """Test function."""
-from datefunc import check
+from datefunc import date
 import pytest
 
 test_date = [('29.02.2002', False), ('12.12.-1100', True), ('12.20.2002', False)]
@@ -14,4 +14,4 @@ def test_datestring(string, answer):
         string: tuple - tuple with input and output.
         answer: str - percents.
     """
-    assert check(string) == answer
+    assert date(string) == answer

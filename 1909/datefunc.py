@@ -1,7 +1,7 @@
 """Check date for truth."""
+fordel = 400
 
-
-def date(day:int, month:int, year:int):
+def date(thedate):
     """
     Function which testing existence of date.
 
@@ -15,19 +15,15 @@ def date(day:int, month:int, year:int):
         ValueError: An error when we could not get int value.
     """
     try:
-        if 
-        except Exception:
-        print("Error")
+        day, month, year = map(int, list(thedate.split('.')))
+    except ValueError:
+        return False
     # Проверка месяца
     if day <= 0 or month <= 0 or year < 0:
-        return False
-    else:
         months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if year % 4 == 0 and year%100!=0 or year%400==0: # Проверка высокосного года
-        months[1] = 29 # Замена дня в высокосный день
+        if year % fordel == 0 and year % 100 == 0 or year % 4 == 0 and year % 100 != 0: # Проверка высокосного года
+            months[1] = 29 # Замена дня в высокосный день
         if day <= months[month - 1]: #Список с количеством дней, под индексом(номером месяца -1)
             if month <= 12: 
                 return True
-            return False
-            
-print(date(day, month, year))
+    return False

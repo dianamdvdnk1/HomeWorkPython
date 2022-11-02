@@ -2,14 +2,16 @@
 
 def function_of_percent(stroka: str):
 # Берем подстроку из строки
-    for slovo in napishi.split(" "): 
+    res = 0
+    for slovo in stroka.split(" "): 
         bolshoi_bukva = 0
         malii_bukva = 0 # Объявляем меременные подсчета
         for bukva in slovo: # Смотрим на букву
             if bukva.isupper(): # Проверяем букву
                 bolshoi_bukva += 1
-            elif bukva.islower():
+            else:
                 malii_bukva += 1
-
-print(round(sum() * 100 / len(), 2))
+        if bolshoi_bukva > malii_bukva:
+            res += 1
+    return '{0}%'.format(100 // (len(stroka.split()) // res))
             
